@@ -1,0 +1,71 @@
+<! DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<style>
+
+					body {
+								background-color: #990000;
+}
+
+		</style>
+
+	</head>
+
+			<body>
+
+	<h1> Cynthia's Mood Ring</h1>
+
+	<button id="moodButton" onclick="changeMood()" value="0">MOOD CHANGE HERE</button>
+
+	<div id="moodStatement">Feeling Kinda Scorpio</div>
+
+
+	<script>
+text =""
+function changeMood(){
+	button = document.getElementById("moodButton")
+	if (button.value == '0') {
+		text ="Purple. issa Mood";
+		document.getElementById('moodStatement').innerHTML = text
+		document.body.style.backgroundColor = "#CC99FF";
+		button.value = '1';
+	}
+
+
+
+	else if (button.value == '1') {
+		text ="FEELING THE PINK";
+		document.getElementById('moodStatement').innerHTML = text
+		document.body.style.backgroundColor = "#FFCCCC";
+		button.value = '2';
+	}
+
+
+	else if (button.value == '2') {
+		text =" FEELING THE ORANGE JUICE";
+		document.getElementById('moodStatement').innerHTML = text
+		document.body.style.backgroundColor = "#FF9900";
+		button.value = '3';
+	}
+
+
+
+	else {
+		text = "Feeling Sequoia Green ";
+		document.getElementById('moodStatement').innerHTML = text;
+				document.body.style.backgroundColor = "#339933";
+		button.value = '3';
+	}
+
+
+
+
+}
+
+
+	</script>
+			</body>
+</html>
