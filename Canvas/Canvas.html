@@ -1,0 +1,65 @@
+<html>
+<head>
+
+	<h1>Blue Box </h1>
+<meta name="robots" content="noindex">
+
+<style type="text/css">
+
+body {
+background-color:black;
+}
+#Canvas1 {
+border:5px dotted red;
+
+
+}
+
+* { 
+font-family:Gotham Book;
+font-size: 70px;
+color:red;
+
+letter-spacing: 10px;
+
+
+}
+</style>
+
+
+<script>
+window.onload = function() {
+
+var theCanvas = document.getElementById('Canvas1');
+if (theCanvas && theCanvas.getContext) {
+var ctx = theCanvas.getContext("2d");
+if (ctx) {
+
+var patCanvas = document.getElementById('patCan');
+var patCtx = patCanvas.getContext("2d");
+
+patCtx.strokeStyle = "Blue";
+patCtx.lineWidth=150;
+patCtx.beginPath();
+patCtx.moveTo(9,0);
+patCtx.lineTo(0,9);
+patCtx.stroke();
+
+var strokePat = ctx.createPattern(patCanvas,"repeat");
+
+ctx.strokeStyle = strokePat;
+ctx.lineWidth = 700;
+ctx.strokeRect(10,10,700,700);
+
+}
+}
+}
+</script>
+</head>
+<body>
+
+<canvas id="Canvas1" width="700" height="700"></canvas>
+<canvas id="patCan" width="40" height="90"></canvas>
+
+</body>
+</html>
