@@ -3,7 +3,7 @@
 
 <head>
  <title>Midterm</title>
-<link href="midterm/html/stylesheet.css" type="text/css" rel="stylesheet"/> 
+<link rel="stylesheet" media=" all" href="/midterm/stylesheet.css" type="text/css" /> 
 <script src='midterm/html/javascript.js'></script>
  <meta charset="utf-8">
 </head>
@@ -12,11 +12,15 @@
  <div class="header">
   <center>
   	<h2>Canvas Test</h2>
-		<button id="startbtn" onclick="draw(); document.getElementById('startbtn').remove();">Start</button>
+		<button id="startbtn" onclick="draw(); 
+document.getElementById('startbtn').remove();">Start</button>
   </center>
  </div>
- <canvas id="screen"></canvas>
+ <canvas id="screen">
+
+</canvas>
  <div class="controls">
+
   <div>
    <center>
     <button onclick="p.up()">Up</button>
