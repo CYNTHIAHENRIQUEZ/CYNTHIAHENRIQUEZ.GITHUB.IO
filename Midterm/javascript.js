@@ -32,7 +32,7 @@ class Player {
 
 //main canvas variables 
 var screen = document.getElementById("screen");
-var ctx = screen.getContext("2d");
+var ctx = canvas.getContext("2d");
 var p = new Player();
 
 //rendering recursive loop
