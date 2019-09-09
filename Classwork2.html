@@ -15,7 +15,9 @@
 	</h2>
 
 
-<button onclick="firstFunction () "> Click Moi </button>
+<button onclick="dateChoice(1)"> Click Moi </button>
+<button onclick="dateChoice(2)"> Click Moi </button>
+
 
 <div id='mytextbox'></div>
 
@@ -26,10 +28,23 @@
 
 <script>
 
-function firstFunction () {
-	alert('the button is clicked');
+
+
+	function dateChoice(choiceVal) {
+		choiceVal=choiceVal
+		alert(choiceVal);
+	}
+
+
+
+//Ive written a function I wanna know what their date choice so I need that button to make that interaction to cast value 
+
+
+
+function secondFunction () {
+	alert('the second button is clicked');
 	console.log('the button is clicked');
-	document.getElemntById('mytextbox')innerHTML = 'adding some text now';
+	document.getElemntById('mytextbox')innerHTML = '<h2> now I have twi functions</h2>';
 }
 
 
