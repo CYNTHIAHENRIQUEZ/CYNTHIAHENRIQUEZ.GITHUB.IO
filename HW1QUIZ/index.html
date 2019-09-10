@@ -4,14 +4,60 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="Homework_1_stylesheet.css">
 <script>
-		var alertNum= 1;
-		var alertArray=['element 1','element 2','element 3']
-		var alertMsg= 'You are 77% involed';
+		//var alertNum= 1;
+		//var alertArray=['element 1','element 2','element 3']
+		//var alertMsg= 'You are 77% involed';
 
 
 
 //alert(alertArray[0])
-alert(alertMsg)
+//alert(alertMsg)
+
+function newFunction() {
+	alert('Nice');
+	document.getElementById("answer").innerHTML= "You scored 10%"; 
+}
+
+function newFunction2() {
+	alert('Its Okay');
+	document.getElementById("answer").innerHTML= "You scored 10%"; 
+}
+
+
+
+function newFunction3() {
+	alert('Nice');
+	document.getElementById("answer").innerHTML= "You scored 20%"; 
+}
+
+
+function newFunction4() {
+	alert('Nice');
+	document.getElementById("answer").innerHTML= "You scored 10%"; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -26,7 +72,12 @@ alert(alertMsg)
 	<h1> How involved are you in your community?</h1>
 	<ol> <p1>Do/have you:</p1>
 <li>Donate your resources?</li>
+<button onclick="newFunction()">yes</button>
+<button onclick="newFunction2()">no</button>
+
 <li>Volunteer your time?</li>
+<button onclick="newFunction3()">yes</button>
+<button onclick="newFunction4()">no</button>
 <li>Shop from local businesses? </li>
 <li>Support your local sports team?</li>
 <li>Go to council meetings (city, town, county, etc?)</li>
@@ -36,6 +87,14 @@ alert(alertMsg)
 <li>Go to community events (festival, parades, etc)?</li>
 <li>Join a community group (neighborhood watch)?</li>
 </ol>
+
+<div>
+	<h2> Score</h2>
+	<p id="answer"></p>
+		
+
+
+	</script>
 
 		</body>
 
