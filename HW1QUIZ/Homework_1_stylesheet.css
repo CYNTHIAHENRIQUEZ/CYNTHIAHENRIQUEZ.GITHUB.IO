@@ -7,9 +7,11 @@
 	
 
 div {
-padding-top: 10cm;
-padding-bottom: 10cm;
-padding-right:20cm;
-padding-left:20cm;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-right:20px;
+padding-left:20px;
+
+align-content: center;
 
 }
