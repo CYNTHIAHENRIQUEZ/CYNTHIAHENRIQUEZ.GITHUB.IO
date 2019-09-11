@@ -1,18 +1,10 @@
 
-	
-	body {
-  background-color: lightgreen;
- font-family:arial;
-}
-	
-
-div {
-	border-style: dotted;
-padding-top: 5px;
-padding-bottom: 5px;
-padding-right:20px;
-padding-left:20px;
-
-align-content: center;
-
-}
+	html {
+font-family:arial;
+width: 80%;
+max-width: 700px;
+border: 20px linen dotted;
+margin: auto;
+padding: 10px;
+background-color: lightpink;
+border-radius: 20px;

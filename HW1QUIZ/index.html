@@ -18,18 +18,35 @@ function newFunction(value) {
 	document.getElementById("answer").innerHTML= "10 points for you!"; 
 }
 
-function newFunction2() {
-	alert('Its okay');
+function newFunction2(value) {
+	alert(value);
 	document.getElementById("answer").innerHTML= "Minus 10 points!"; 
 }
 
+function theFunction (param){
+value = param
+console.log (value);
+//images = []
+var text='';
 
 
+switch(value) {
+		case 0:
+		text= "Thank you for donating!";
+		break;
+
+default: "Jeepers Sweetie";
+
+}
+
+document.getElementById("score").innerHTML= text;
+
+}
 
 </script>
 
 
-
+<div id="quiz">
 </head>
 
 	<body>
@@ -37,20 +54,20 @@ function newFunction2() {
 	<h1> How involved are you in your community?</h1>
 	<ol> <p1>Do/have you:</p1>
 <li>Donate your resources?</li>
-<button onclick="newFunction(0)">yes</button>
-<button onclick="newFunction2()">no</button>
+<button onclick="newFunction(0);theFunction('param')">yes</button>
+<button onclick="newFunction2(10)">no</button>
 
 <li>Volunteer your time?</li>
 <button onclick="newFunction(1)">yes</button>
-<button onclick="newFunction2()">no</button>
+<button onclick="newFunction2(9)">no</button>
 
 <li>Shop from local businesses? </li>
 <button onclick="newFunction(2)">yes</button>
-<button onclick="newFunction2()">no</button>
+<button onclick="newFunction2(8)">no</button>
 
 <li>Support your local sports team?</li>
 <button onclick="newFunction(3)">yes</button>
-<button onclick="newFunction2()">no</button>
+<button onclick="newFunction2(7)">no</button>
 
 <li>Go to council meetings (city, town, county, etc?)</li>
 <button onclick="newFunction(4)">yes</button>
@@ -78,13 +95,27 @@ function newFunction2() {
 
 </ol>
 
-<div>
-	<h2> Oh Look!</h2>
-	<p id="answer"></p>
-		
+
+
+
+
+	<div id="Oh Look">
+		<h2> Oh Look!</h2>
+		<p id="answer"></p>
+		<p2 id="score"></p3>
+	</div>
+
+
+
+
+
 </div>
 
-	</script>
+
+
+
+
+
 
 		</body>
 
