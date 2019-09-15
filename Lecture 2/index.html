@@ -34,13 +34,13 @@ function newFunction(value) {
 
 function newFunction2(value) {
 	alert("Its okay!");
-	document.getElementById("answer").innerHTML= "Minus 10 points!"; 
+	document.getElementById("answer").innerHTML= "No points!"; 
 }
 
 function theFunction (param){
 value = param
 console.log (value);
-images = ['pic1.png','pic2.png','pic3.png','pic4.png'];
+images = ['pic1.png','pic2.png','pic3.png','pic4.png','pic5.png','pic6.png','pic7.png','pic8.png','pic9.png','pic10.png'];
 text ='';
 
 
@@ -86,13 +86,12 @@ switch(value) {
 		break;
 
 		case 10:
-		text= "If you want you can go to nyc.gov for more info";
+		text= "If you want you can google your states official site for how to get involved! ";
 		break;
 		
 		default: "Jeepers Sweetie";
 
 }
-
 
 
 
@@ -108,11 +107,6 @@ document.getElementById("icon") .src= images[value];
 
 
 
-
-
-
-
-
 <div id="quiz">
 </head>
 
@@ -120,8 +114,8 @@ document.getElementById("icon") .src= images[value];
 		<h2> Oh Look!</h2>
 		<p id="answer"></p>
 		<p2 id="score"></p2>
-			<img id="icon" src="">
-
+		<img id="icon" src="">
+			
 		
 	<div id="total">
 		<p3>Total: <a id="clicks">0</a></p3>
@@ -146,31 +140,31 @@ document.getElementById("icon") .src= images[value];
 <button onclick="newFunction2(10);theFunction(10)">NO</button>
 
 <li>Support your local sports team?</li>
-<button onclick="newFunction(3);theFunction(3)">YES</button>
+<button onclick="newFunction(3);theFunction(3);susFunction()">YES</button>
 <button onclick="newFunction2(10);theFunction(10)">NO</button>
 
 <li>Go to council meetings (city, town, county, etc?)</li>
-<button onclick="newFunction(4);theFunction(4)">YES</button>
+<button onclick="newFunction(4);theFunction(4);susFunction()">YES</button>
 <button onclick="newFunction2(10);theFunction(10)">NO</button>
 
 <li>Introduce yourself to your neighbors?</li>
-<button onclick="newFunction(5);theFunction(5)">YES</button>
+<button onclick="newFunction(5);theFunction(5);susFunction()">YES</button>
 <button onclick="newFunction2(10);theFunction(10)">NO</button>
 
 <li>Know what services your community provides?</li>
-<button onclick="newFunction(6);theFunction(6)">YES</button>
+<button onclick="newFunction(6);theFunction(6);susFunction()">YES</button>
 <button onclick="newFunction2(10);theFunction(10)">NO</button>
 
 <li>Participate in community center classes?</li>
-<button onclick="newFunction(7);theFunction(7)">YES</button>
+<button onclick="newFunction(7);theFunction(7);susFunction()">YES</button>
 <button onclick="newFunction2(10);theFunction(10)">NO</button>
 
 <li>Go to community events (festival, parades, etc)?</li>
-<button onclick="newFunction(8);theFunction(8)">YES</button>
+<button onclick="newFunction(8);theFunction(8);susFunction()">YES</button>
 <button onclick="newFunction2(10);theFunction(10)">NO</button>
 
 <li>Join a community group (neighborhood watch)?</li>
-<button onclick="newFunction(9);theFunction(9)">YES</button>
+<button onclick="newFunction(9);theFunction(9);susFunction()">YES</button>
 <button onclick="newFunction2(10);theFunction(10)">NO</button>
 
 </ol>

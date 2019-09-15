@@ -1,3 +1,17 @@
+html {
+	
+	background: url(background.jpg),no-repeat, center, fixed;
+	background-size: cover;
+
+}
+
+
+
+
+
+
+
+
 button {
 	border:none;
   	background-image: linear-gradient(to top left, #aed100, #ecff8f);   
@@ -9,7 +23,7 @@ button {
 
 #OhLook {
 font-size:130%;
-text-align: right;
+text-align: center;
 padding:15px;
 margin:10px;
 border-style:solid;
@@ -19,8 +33,14 @@ background-color: #ffc552;
 box-shadow: 10px 10px grey;
 }
 
-
-
+#icon {
+	float:center;
+	padding: 30px;
+	border-style: none;
+	margin-top: 10px;
+	margin-bottom:10px;
+		width: 75%;
+}
 
 
 ol p1 {
@@ -29,6 +49,7 @@ ol p1 {
 	font-size: 150%;
 	background-color: #ffc552;
 	border: none;
+
 
 	padding:5px;
 }
