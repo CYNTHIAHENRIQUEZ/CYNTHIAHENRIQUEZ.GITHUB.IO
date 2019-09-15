@@ -3,10 +3,24 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="Homework_1_stylesheet.css">
-<script>
+<script type="text/javascript">
 		//var alertNum= 1;
 		//var alertArray=['element 1','element 2','element 3']
 		//var alertMsg= 'You are 77% involed';
+
+
+//counter
+
+    var clicks = 0;
+    function susFunction() {
+        clicks += 10;
+        document.getElementById("clicks").innerHTML = clicks;
+    }
+
+
+
+
+
 
 
 
@@ -105,10 +119,14 @@ document.getElementById("icon") .src= images[value];
 	<div id="OhLook">
 		<h2> Oh Look!</h2>
 		<p id="answer"></p>
-		<p2 id="score"></p3>
+		<p2 id="score"></p2>
 			<img id="icon" src="">
-	</div>
 
+		
+	<div id="total">
+		<p3>Total: <a id="clicks">0</a></p3>
+	</div>
+	</div>
 
 
 	<body>
@@ -116,15 +134,15 @@ document.getElementById("icon") .src= images[value];
 	<h1> How involved are you in your community?</h1>
 	<ol> <p1> Do/have you : </p1>
 <li>Donate your resources?</li>
-<button onclick="newFunction(0);theFunction(0)">YES</button>
+<button onclick="newFunction(0);theFunction(0);susFunction()">YES</button>
 <button onclick="newFunction2(10);theFunction(10)">NO</button>
 
 <li>Volunteer your time?</li>
-<button onclick="newFunction(1);theFunction(1)">YES</button>
+<button onclick="newFunction(1);theFunction(1);susFunction()">YES</button>
 <button onclick="newFunction2(10);theFunction(10)">NO</button>
 
 <li>Shop from local businesses? </li>
-<button onclick="newFunction(2);theFunction(2)">YES</button>
+<button onclick="newFunction(2);theFunction(2);susFunction()">YES</button>
 <button onclick="newFunction2(10);theFunction(10)">NO</button>
 
 <li>Support your local sports team?</li>
