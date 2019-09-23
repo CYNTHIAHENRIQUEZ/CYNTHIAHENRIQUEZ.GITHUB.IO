@@ -1,0 +1,42 @@
+div#main {
+font-family: sans-serif;
+text-transform: uppercase;
+object-position: center;
+border-style: solid white;
+text-align: center;
+height: 60%;
+width: 60%;
+color:white;
+padding: 10px;
+margin: 0 auto;
+border: 40px;
+border-style: none;
+}
+
+
+
+
+button {
+  display: flex;
+  text-decoration-color: black;
+  flex: 1 1 auto;
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border: 50px;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 30%;
+  margin: auto;
+  min-height: 30%;
+  background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+ 
+
+}
