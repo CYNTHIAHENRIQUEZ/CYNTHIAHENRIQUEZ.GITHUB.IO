@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+<p>boop</p>
+<script>
+	var firstObject = {
+		name:'John',
+		color:'Brown',
+		length:'Short',
+		type:'Curly',
+		myObjectFunction: function(){
+			alert(this.name + ' has ' + this.type + ' hair ');
+		}
+	
+
+	}
+firstObject.myObjectFunction();
+
+	//alert(firstObject['name']+ ' has '+ firstObject['type'] + ' hair ');
+
+function hairType(name,color,length,type){
+	this.name = name;
+	this.color= color;
+	this.length = length;
+	this.type = type;
+	this.notice=function(){
+		alert(this.name + ' has ' + this.type + ' hair ');
+	}
+
+}
+var objFromConstructor = new hairType('Kelly','red','short','sleek');
+//alert(objFromConstructor.name);
+objFromConstructor.notice();
+
+</script>
+</body>
+</html>

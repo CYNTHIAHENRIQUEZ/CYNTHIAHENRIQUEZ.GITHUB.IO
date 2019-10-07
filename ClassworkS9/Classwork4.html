@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<style> 
+		canvas { border: 1px solid black;
+
+
+
+		 }
+
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<canvas id="firstCanvas" width="500" height="500"> </canvas>
+
+<script>
+	var canvas = document.getElementById("firstCanvas");
+	var ctx = canvas.getContext("2d");
+
+	ctx.beginPath();
+	ctx.moveTo(0,0);
+	ctx.lineTo(500,500);
+	ctx.stroke();
+
+	ctx.fillRect(25,25,100,100);
+	ctx.clearRect(45,45,60,60);
+
+	ctx.beginPath();
+	ctx.moveTo(300,350);
+	ctx.lineTo(400,350);
+	ctx.lineTo(400,425)
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.arc(300,100,60,0,2*Math.PI);
+	ctx.stroke();
+	ctx.fillStyle ='green';
+	ctx.fill();
+	
+
+
+
+
+
+//commands associated with canvas
+// This is a block object that can handle animation( sits like other elements)
+// automaically transparent soyou could apply css styles to it
+//going negative takes you offscreen (the zero zero is in the top left)
+//becareful with placement has to be script properties must be below the canvas!!//
+//to draw a line you start a path using the start point named (move-to) and (line-to) is the end
+//
+
+</script>
+
+
+</body>
+
+
+
+</html>
