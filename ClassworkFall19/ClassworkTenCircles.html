@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<style>
+
+body{
+		background-color: grey;
+}
+
+	canvas{
+	border: 1px solid black;
+}
+
+		</style>
+	</head>
+
+<body>
+	<canvas id='2ndcanvas' width="400" height="400" ></canvas>
+
+<script>
+var canvas = document.getElementById('2ndcanvas');
+var ctx = canvas.getContext('2d');
+
+ctx.beginPath();
+	ctx.arc(20,15,10,0,2*Math.PI);
+	ctx.stroke();
+	ctx.fillStyle ='red';
+	ctx.fill();
+
+
+ctx.beginPath();
+	ctx.arc(40,40,15,0,2*Math.PI);
+	ctx.stroke();
+	ctx.fillStyle ='orange';
+	ctx.fill();
+
+ctx.beginPath();
+	ctx.arc(70,70,10,0,2*Math.PI);
+	ctx.stroke();
+	ctx.fillStyle ='yellow';
+	ctx.fill();
+
+
+ctx.beginPath();
+	ctx.arc(25,90,20,0,2*Math.PI);
+	ctx.stroke();
+	ctx.fillStyle ='lightgreen';
+	ctx.fill();
+
+
+ctx.beginPath();
+	ctx.arc(120,100,10,0,2*Math.PI);
+	ctx.stroke();
+	ctx.fillStyle ='green';
+	ctx.fill();
+
+
+ctx.beginPath();
+	ctx.arc(130,130,20,0,2*Math.PI);
+	ctx.stroke();
+	ctx.fillStyle ='purple';
+	ctx.fill();
+
+ctx.beginPath();
+	ctx.arc(160,190,20,0,2*Math.PI);
+	ctx.stroke();
+	ctx.fillStyle ='magenta';
+	ctx.fill();
+
+ctx.beginPath();
+	ctx.arc(220,220,15,0,2*Math.PI);
+	ctx.stroke();
+	ctx.fillStyle ='pink';
+	ctx.fill();
+
+ctx.beginPath();
+	ctx.arc(270,270,35,0,2*Math.PI);
+	ctx.stroke();
+	ctx.fillStyle ='cyan';
+	ctx.fill();
+
+ctx.beginPath();
+	ctx.arc(350,350,10,0,2*Math.PI);
+	ctx.stroke();
+	ctx.fillStyle ='blue';
+	ctx.fill();
+
+
+</script>
+
+
+
+
+</body>
+</html>
+
+

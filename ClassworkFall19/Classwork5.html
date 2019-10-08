@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<meta charset='utf-8'>
+		<style>
+
+body{
+		background-color: pink;
+}
+
+	canvas{
+	border: 1px solid black;
+}
+
+		</style>
+
+	</head>
+
+<body>
+
+<canvas id='2ndcanvas' width="400" height="400" ></canvas>
+<button onclick="line1.drawLine()"> Draw Line</button>
+<button onclick="line1.eraseLine()"> erase Line</button>
+
+
+<script>
+var canvas = document.getElementById('2ndcanvas');
+var ctx = canvas.getContext('2d');
+
+	var lineObject = {
+		startX: 10,
+		startY: 10,
+		finishX: 10,
+		finishY: 400,
+		drawline: function() {
+			ctx.beginPath();
+			ctx.moveTo(this.startX, this.startY);
+			ctx.lineTo(this.finishX, this.finishY);
+			ctx.stroke();
+		}
+	}
+
+lineObject.drawline();
+
+function lineObjectConstructor(startX,startY,finishX,finishY,ctx){
+	this.startX = startX;
+	this.startY = startY;
+	this.finishX = finishX;
+	this.finishY = finishY;
+	this.ctx = ctx;
+	this.drawLine = function() {
+		this.ctx.beginPath();
+		this.ctx.moveTo(this.startX,this.startY);
+		this.ctx.lineTo(this.finishX,this.finishY);
+		this.ctx.stroke();
+
+	}
+
+	this.eraseLine = function() {
+		this.ctx.beginPath();
+		this.ctx.moveTo(this.startX,this.startY);
+		this.ctx.lineTo(this.finishX,this.finishY);
+		this.ctx.strokeStyle = 'pink';
+		this.ctx.stroke();
+
+
+	}
+}
+
+
+line1 = new lineObjectConstructor(10, 0, 30, 400, ctx);
+lines = [];
+//line1.drawline();
+
+totalLines = ctx.canvas.width;
+x =0;
+
+function createLines(x,ctx,lines){
+
+
+while (x <= totalLines) {
+	totalLines = ctx.canvas.width;
+	lines[x] = new lineObjectConstructor(x,0,x,totalLines,ctx);
+	//console.log(lines[x]);
+	//lines[x].drawline();
+	x = x+1;
+
+	} 
+	return lines;
+}
+createLines(0,ctx,lines)
+	//console.log(lines);
+	
+	function drawLines(lines, z,ctx) {
+		lines[z].drawlines();
+		totalLines =400;
+		if (z <= totalLines) {
+			setTimeout(lines [z].drawLine(),100);
+			z++
+
+	}
+}
+
+function wrapDraw(lines, x, ctx) {
+	x=0;
+	drawLines(lines, 0, ctx);
+	setTimeout(lines [z].drawLine(),100);
+}
+
+wrapDraw (lines,0,ctx);
+	
+
+
+
+
+	//drawLines (lines,0,ctx)
+</script>
+
+
+</body>
+
+
+</html>
