@@ -321,7 +321,7 @@
                     ctx.lineTo(rso[n][6],rso[n][7]);
                     ctx.lineTo(rso[n][0],rso[n][1]);
                     ctx.lineWidth = 2;
-                    ctx.fillStyle = rso[n][8];//"rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")";
+                    ctx.fillStyle = rso[n][8];
                     ctx.fill();
                     ctx.closePath();
                     
@@ -332,7 +332,7 @@
                     ctx.lineTo(w-rso[n][6],rso[n][7]);
                     ctx.lineTo(w-rso[n][0],rso[n][1]);
                     ctx.lineWidth = 2;
-                    ctx.fillStyle = rso[n][8];//"rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")";
+                    ctx.fillStyle = rso[n][8];
                     ctx.fill();
                     ctx.closePath();
                     
@@ -362,7 +362,7 @@
                 try{
                 ctx.clearRect(0,0,w,h);
                 maxH+=0.5;
-                changedHeight = maxH*cnst1*(Math.pow(1/ratio,totalRso-1)-1);//maxH*(1-Math.pow(ratio,totalRso-5))/(1-ratio);
+                changedHeight = maxH*cnst1*(Math.pow(1/ratio,totalRso-1)-1);
                 if(changedHeight >= totalHeight){
                     maxH = maxHF;
                     m++;
