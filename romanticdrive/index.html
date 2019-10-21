@@ -20,11 +20,16 @@
 
 
         <div class="gameHome" id="startPage">
+
             <div id="gameTitle">Romantic Drive Simulator</div>
-            <button onclick="ld()" id="playBtn"><span style="font-size:18px">Loading Assets<br>Please Wait...<br>This may take a few seconds for first time</span></button><br>
+
+            <button onclick="ld()" id="playBtn"><span style="font-size:18px">Loading Goodies<br>Please Wait <br>May take a few seconds for first time</span></button><br>
             <div id="ldc"><div id="loading"></div></div>
-            <p>Use left/right arrow key on your PC</p>
+
+            <p>Use left & right arrow keys on your PC</p>
+
             <script type="text/javascript">
+
                 (function(){
                     "use strict"
                     var hw = window.innerWidth || 360;
@@ -47,27 +52,35 @@
 
         
         <div id="mainContainer" style="background:#7d0066" >
+           
             <img id="city" src="background.png">
             
-           <canvas id="myCanvas" style="/*background:#9de732*/" ></canvas>
+           <canvas id="myCanvas" ></canvas>
+
+
         </div>
 
-
         <img class="aImg" id="t1" src="t1.png">
+
         <img class="aImg" id="t2" src="t2.png">
+
         <img class="aImg" id="t3" src="t3.png">
+
         <img class="aImg" id="t4" src="t4.png">
+
         <img class="aImg" id="c1" src="c1.png">
         
         <script>
                    
+       
+
         var ld;
         var loaded = false;
         
         function done(){
             document.getElementById("ldc").innerHTML="";
             document.getElementById("ldc").style.display = "none";
-            document.getElementById("playBtn").innerHTML = "PLAY";
+            document.getElementById("playBtn").innerHTML = "Take A Drive";
             loaded = true;
         }
         
@@ -343,7 +356,7 @@
 
 
 
-
+            			//Road Border//
             var m = 0;
             var intv = setInterval(function(){
                 try{
@@ -380,6 +393,8 @@
                 
             },10)
             //draw();
+
+
             
             //Game Control
             
