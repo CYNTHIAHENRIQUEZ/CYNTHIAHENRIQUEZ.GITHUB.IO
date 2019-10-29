@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html>
@@ -15,7 +14,7 @@
         <div id="scoreDiv">
             <span id="score">0</span>
             <img src="coin.png" id="cn">
-			</div>
+            </div>
 
 
 
@@ -29,7 +28,6 @@
             <p>Use left & right arrow keys on your PC</p>
 
             <script type="text/javascript">
-
                 (function(){
                     "use strict"
                     var hw = window.innerWidth || 360;
@@ -73,7 +71,6 @@
         <script>
                    
        
-
         var ld;
         var loaded = false;
         
@@ -321,7 +318,7 @@
                     ctx.lineTo(rso[n][6],rso[n][7]);
                     ctx.lineTo(rso[n][0],rso[n][1]);
                     ctx.lineWidth = 2;
-                    ctx.fillStyle = rso[n][8];
+                    ctx.fillStyle = rso[n][8];//"rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")";
                     ctx.fill();
                     ctx.closePath();
                     
@@ -332,7 +329,7 @@
                     ctx.lineTo(w-rso[n][6],rso[n][7]);
                     ctx.lineTo(w-rso[n][0],rso[n][1]);
                     ctx.lineWidth = 2;
-                    ctx.fillStyle = rso[n][8];
+                    ctx.fillStyle = rso[n][8];//"rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")";
                     ctx.fill();
                     ctx.closePath();
                     
@@ -352,17 +349,13 @@
             }
             
             
-
-
-
-
-            			//Road Border//
+                        //Road Border//
             var m = 0;
             var intv = setInterval(function(){
                 try{
                 ctx.clearRect(0,0,w,h);
                 maxH+=0.5;
-                changedHeight = maxH*cnst1*(Math.pow(1/ratio,totalRso-1)-1);
+                changedHeight = maxH*cnst1*(Math.pow(1/ratio,totalRso-1)-1);//maxH*(1-Math.pow(ratio,totalRso-5))/(1-ratio);
                 if(changedHeight >= totalHeight){
                     maxH = maxHF;
                     m++;
@@ -393,8 +386,6 @@
                 
             },10)
             //draw();
-
-
             
             //Game Control
             
@@ -473,4 +464,3 @@
         </script>
     </body>
 </html>
-
