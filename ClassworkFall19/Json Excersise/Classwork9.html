@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset='utf-8'>
+</head>
+<head>
+	<title> Classwork 9</title>
+	<link rel="stylesheet" href="stylesheet.css"/>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+	<h1> Club Events </h1>
+	<script src="add-content.js"></script>
+
+	<div id="topnav">
+		<ul>
+			<li>home</li>
+			<li>about</li>
+			<li>contact us</li>
+
+	</div> 
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script type="text/javascript" src="myJson.json"></script>
+
+<script> 
+
+
+myObject = {name1:“value1}
+myJsonObject = [
+{“club” : smokey Cafe”, “ artist: Johnnu guitar”. “ date: 2019-11-04” 
+ 
+{“club”: “big hall”, “artist”: “Julie Bass”, “Date”:”2019-11-04”}
+]
+
+alert(myJsonObject[1][‘artist’]);
+
+
+outsideJson1= $.get ('http://builtcollective.com/webdesign2/lecture9/BigMusicClubConclomerateDates.json');
+
+outsideJson2= $.get ('https://data.cityofnewyork.us/api/view/kku6-nxdu/rows.json?accessType=DOWNLOAD ') 
+
+console.log(oustideJson2);$("p").click(function()){}
+
+
+
+/*assign the date to a variable if it works you check the (find it in state) status if 200 now get started and  your looking for the response. If I wanted to get in to the response json how would youwrite into the console log??name:value
+Internet status codes 200= understand teh date first make it work then use it
+
+
+/*for this example we are using document.ready jquery object to load all of our Javascript calls.
+remember the window.onload? Well this is jquery's version
+This is so the are "available" at the time of use. There can be event issues that occur if you haven't 
+managed this*/
+
+
+
+/* jQuery syntax:
+$(selectorhere).jQueryObject(function() {
+	your lines of code go here
+});
+*/
+
+
+
+$( document ).ready(function() {
+
+
+    //this jQuery click calls based on a P tag selector
+    //all P tags on this page will perform the same alert 
+
+
+//lets start with jquery click events
+//can be applied universally to a html element
+
+	$("p").click(function() {
+		alert("you have clicked a p tag");
+		//alert(myFirstJSON["name"]);
+		//alert(myFirstJSON.age);
+		//console.log(outsideJSON2["responseJSON"]);
+	});   
+
+//can call based on ID
+
+	//this jQuery click calls on the yellow CSS id selector
+	$("#yellow").click(function() {
+		alert("you have clicked the yellow box");
+		//can do effects
+		$(".green").fadeOut(5000);
+		$(".hideshow").toggle(5000);
+	});
+
+//can call based CSS class selector
+
+	//this jQuery click calls on the blue CSS class selector
+	$(".blue").click(function(){
+		alert("you have clicked the blue box");
+		//can see another event
+		$(".green").fadeIn(5000);
+	});
+
+
+// can do mouseovers 
+// and other events
+//https://api.jquery.com/category/events/mouse-events/
+//just so you can see we will do a mouseover
+$( "#mouseover" ).mouseover(function() {
+  alert('mousedover');
+});
+
+//gets better
+//now let's use jquery UI. You can realy start to see the power
+// add link to it same as jquery library. must also include the css though
+
+
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+
+  /*
+  $( function() {
+  	$( "#accordion" ).accordion();
+  	//want all of the according to start collapsed?
+   // $( "#accordion" ).accordion({ header: "h3", collapsible: true, active: false });
+  } );
+  */
+
+//end of document.ready function
+});  
+
+
+</script>
+
+
+<style> 
+
+#yellow {
+	padding: 5px;
+	text-align: center;
+	background-color: yellow;
+	border: solid 1px;
+}
+
+.blue {
+	padding: 5px;
+	text-align: center;
+	background-color: blue;
+	border: solid 1px;
+}
+
+.green {
+	padding: 5px;
+	text-align: center;
+	background-color: green;
+	border: solid 1px;
+	display: none;
+}
+
+.hideshow {
+	padding: 5px;
+	text-align: center;
+	background-color: purple;
+	border: solid 1px;
+}
+
+#mouseover {
+	border: solid 1px;
+	height: 100px;
+	width: 100px;
+}
+
+
+</style>
+</head>
+<body>
+
+<p>Click me</p>
+
+<p>Also click me</p>
+
+<div id="yellow">This is a yellow box</div>
+<div class="blue">This is a blue box</div>
+<div class="green">I fade</div>
+
+<div class="hideshow">I hide and show</div>
+<div id="mouseover">I have mouseover</div>
+
+
+
+<div id="accordion">
+  <h3>Section 1</h3>
+  <div>
+    <ul id="states">
+    	<li>Item one</li>
+    	<li>Item 2</li>
+    </ul>
+  </div>
+  <h3>Section 2</h3>
+  <div>
+    <p>
+    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.
+    </p>
+  </div>
+  <h3>Section 3</h3>
+  <div>
+    <p>
+    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+    </p>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+  <h3>Section 4</h3>
+  <div>
+    <p>
+    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+    mauris vel est.
+    </p>
+    <p>
+    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+    inceptos himenaeos.
+    </p>
+  </div>
+</div>
+ 
+
+
+
+
+</body>
+</html>
+
+<div id="clubs">
+	<h2 id="header"> Our Clubs</h2>
+	<ul>
+		<li id="Big Hall" class="club"> Big Hall</li>
+			<ul id="BHE"> located on </ul>
+		<li id="Smokey Club" class="club"> Smokey Club</li>
+			<ul id="SCE"></ul>
+		<li id="Little Cafe" class="club"> Little Cafe</li>
+			<ul id="LCE"></ul>
+	</ul>
+</div>
+
+
+<div id="todaysevents"> Today's Events</div>
+
+
+
+<button class="accordion">Big Hall</button>
+<div class="panel">
+  <p>events...</p>
+</div>
+
+<button class="accordion">Smokey Club</button>
+<div class="panel">
+  <p>events...</p>
+</div>
+
+<button class="accordion">Little Cafe</button>
+<div class="panel">
+  <p>events...</p>
+</div>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+</body> 
+</html>

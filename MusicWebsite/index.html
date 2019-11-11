@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset='utf-8'>
+</head>
+<head>
+	<title> Big Music Club Conglomerate </title>
+	<link rel="stylesheet" href="stylesheet.css"/>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+	<h1> Club Events </h1>
+	<script src="add-content.js"></script>
+
+	<div id="topnav">
+		<ul>
+			<li>home</li>
+			<li>about</li>
+			<li>contact us</li>
+
+	</div> 
+
+
+
+<div id="clubs">
+	<h2 id="header"> Our Clubs</h2>
+	<ul>
+		<li id="Big Hall" class="club"> Big Hall</li>
+			<ul id="BHE"> located on </ul>
+		<li id="Smokey Club" class="club"> Smokey Club</li>
+			<ul id="SCE"></ul>
+		<li id="Little Cafe" class="club"> Little Cafe</li>
+			<ul id="LCE"></ul>
+	</ul>
+</div>
+
+
+<div id="todaysevents"> Today's Events</div>
+
+
+
+<button class="accordion">Big Hall</button>
+<div class="panel">
+  <p class="events1"></p>
+</div>
+
+<button class="accordion">Smokey Club</button>
+<div class="panel">
+  <p class="events2"></p>
+</div>
+
+<button class="accordion">Little Cafe</button>
+<div class="panel">
+  <p class="events3"></p>
+</div>
+
+
+<div class="mypanel"></div>
+
+<script>
+
+
+
+
+    myJson = $.getJSON('http://builtcollective.com/webdesign2/lecture9/BigMusicClubConclomerateDates.json', function(data) {
+        
+        var text1 = `Date: ${data[0].venue}<br>
+                    Time: ${data[0].city}<br>`
+
+        var text2 =`Date: ${data[1].artist}<br>
+                    Time: ${data[1].city}<br>
+
+        `
+
+          var text3 =`
+         			Date: ${data[2].artist}<br>
+                    Time: ${data[2].city}<br>
+
+        `
+
+          var text4 =`
+          Date: ${data[3].artist}<br>
+                    Time: ${data[3].city}<br>
+
+        `
+                    
+        
+        $(".events1").html(text1);
+         $(".events2").html(text3);
+          $(".events3").html(text4);
+          $(".mypanel").html(text1);
+    });
+
+
+console.log(myJson)
+
+
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+</body> 
+</html>

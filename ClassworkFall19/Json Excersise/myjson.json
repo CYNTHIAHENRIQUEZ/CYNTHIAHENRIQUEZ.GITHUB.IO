@@ -1,0 +1,13 @@
+
+
+
+var supply
+
+	Supply = [{"brand":"Winsor","type":"set","color":"black","size":"bold"}
+
+	{"brand":"Sakura", "type":"set", "color":"sephia", "size":"brush"}
+
+	{"brand":"Faber Castell", "type":"single", "color":"blue", "size":"thin"}
+
+	{"brand":"copic", "type":"pair", "color":"multi", "size":"chisel"}
+	]
