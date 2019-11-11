@@ -75,7 +75,7 @@
 
     $.getJSON('http://builtcollective.com/webdesign2/lecture9/BigMusicClubConclomerateDates.json', function(data) {
         
-        var text1 = `Date: ${data[0].venue}<br>
+        var text1 = `Date: ${data[0].artist}<br>
                     Time: ${data[0].city}<br>`
 
         var text2 =`Date: ${data[1].artist}<br>
@@ -84,7 +84,7 @@
         `
 
           var text3 =`
-         			Date: ${data[2].artist}<br>
+         			Date: ${data[0].artist}<br>
                     Time: ${data[2].city}<br>
 
         `
