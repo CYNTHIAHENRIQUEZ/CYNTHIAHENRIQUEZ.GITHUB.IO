@@ -73,7 +73,7 @@
 
 
 
-    myJson = $.getJSON('http://builtcollective.com/webdesign2/lecture9/BigMusicClubConclomerateDates.json', function(data) {
+    $.getJSON('http://builtcollective.com/webdesign2/lecture9/BigMusicClubConclomerateDates.json', function(data) {
         
         var text1 = `Date: ${data[0].venue}<br>
                     Time: ${data[0].city}<br>`
