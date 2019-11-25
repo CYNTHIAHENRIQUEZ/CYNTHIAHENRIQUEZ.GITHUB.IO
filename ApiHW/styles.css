@@ -6,8 +6,9 @@ body {
 
 #notes{
 border: 1px solid #333;
-  -webkit-column-span: all;
-  column-span: all;
+ -webkit-column-span: all;
+width:100%;
+align-items: right;
   text-align: center;
 
 
