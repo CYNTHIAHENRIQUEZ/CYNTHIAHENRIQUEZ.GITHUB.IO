@@ -1,4 +1,4 @@
-[
+{"events":[ 
 	{
 		"artist" : "Madonna",
 		"venue": "Little CafÃ©",
@@ -250,3 +250,4 @@
 		"currency": "USD"
 	}
 ]
+}

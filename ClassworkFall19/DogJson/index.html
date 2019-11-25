@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<script> 
+
+
+restrooms = $.get(" https://www.refugerestrooms.org/api/v1/restrooms/by_location.json")
+console.log(restroom);
+
+$( document ).ready(function() {
+       
+
+$.get("https://dog.ceo/api/breed/rottweiler/images", function(data, status){
+showDog(data).fadeIn('slow', function() {
+
+});
+	showDog(data);
+}); 
+
+
+function showDog(data) {
+	dogs = data['message'];
+	for (x in dogs) {
+			img = "<img src='" + dogs[x] + "'><br>"
+			$( "#content" ).append(img);
+		};
+}
+
+
+});
+
+</script>
+
+</head>
+<body>
+
+<h3>Dog:</h3>
+<div id="content"></div>
+
+</script>
+
+</body>
+</html>

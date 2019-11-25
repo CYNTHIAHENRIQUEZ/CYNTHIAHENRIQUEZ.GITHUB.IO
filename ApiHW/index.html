@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="styles.css">	
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFG236Ue0VvucQRZLexLt_g34dOVGYYXg"></script>
+	
+	<script>	
+$(document).ready(function(){
+
+			var marker;
+			var geocoder = new google.maps.Geocoder();
+			var myLatlng = new google.maps.LatLng(40.7328614,-73.8784846,12);
+			var mapOptions = {zoom: 11, center: myLatlng, mapTypeId: google.maps.MapTypeId.ROADMAP}
+			var map = new google.maps.Map($("#map").get(0), mapOptions);
+		
+			$("#links a").click(function() {
+				var address = $(this).text();
+				if (marker) { marker.setMap(null); }
+				geocoder.geocode({address: address}, function(results) {
+			    	marker = new google.maps.Marker({
+				    	position: results[0].geometry.location,
+			    		map: map
+			    	});
+			    	var overlay = new google.maps.OverlayView();
+					overlay.draw = function() {
+						var point = overlay.getProjection().fromLatLngToContainerPixel(
+							marker.getPosition());
+						$("#message").html(
+							"This is: " + address + 
+							"<br><a href=http://maps.google.com/maps?daddr=" + 
+							address + ">Get directions to here</a>");
+						$("#message").show().css({
+							top: point.y + 10,
+							left:point.x 
+						});
+					};
+					overlay.setMap(map);
+				});
+			});
+		});
+
+
+
+
+
+
+
+
+var beaches = [
+        ['Mitchel Memorial', 40.7723586,-73.9409934, 4],
+     
+      ];
+
+      function setMarkers(map) {
+        // Adds markers to the map.
+
+        // Marker sizes are expressed as a Size of X,Y where the origin of the image
+        // (0,0) is located in the top left of the image.
+
+        // Origins, anchor positions and coordinates of the marker increase in the X
+        // direction to the right and in the Y direction down.
+        var image = {
+          url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          // This marker is 20 pixels wide by 32 pixels high.
+          size: new google.maps.Size(20, 32),
+          // The origin for this image is (0, 0).
+          origin: new google.maps.Point(0, 0),
+          // The anchor for this image is the base of the flagpole at (0, 32).
+          anchor: new google.maps.Point(0, 32)
+        };
+    
+        var shape = {
+          coords: [1, 1, 1, 20, 18, 20, 18, 1],
+          type: 'poly'
+        };
+        for (var i = 0; i < beaches.length; i++) {
+          var fav = beaches[i];
+          var marker = new google.maps.Marker({
+            position: {lat: fav[1], lng: fav[2]},
+            map: map,
+            icon: image,
+            shape: shape,
+            title: fav[0],
+            zIndex: fav[3]
+          });
+        }
+      }
+    </script>
+</head>
+<body>
+
+
+
+<div id="nav"> 
+	<ul>
+		<li>About</li>
+		<li>Pics</li>
+ </div>
+
+<br>
+
+<div id="notes"> 
+	<p>  Here are some of the free places Ive visited with my family with great views of NYC.
+	</p>
+</div>
+<br>
+   	<div id="map"></div>
+    <br>
+
+    <ul id="links">
+ 		<li><a href="A1"> Good Place to Watch Planes Fly Low <br> - Airplane Viewing At LaGuardia Airport, East Elmhurst, NY 11369</a></li> 
+        <li><a href="A2"> Smallest Light House On Roosevelt Island <br>//Roosevelt Island Lighthouse, New York, NY 10044</a></li>
+        <li><a href="A3">Hunters Point South Park Great View <br> //Hunter's Point South Park, Center Blvd, Long Island City, NY 11101</a></li> 
+        <li><a href="A4">Bay Ridge Promenade Parking Verrazano View <br> //Bay Ridge Promenade (Start), Brooklyn, NY 11209</a></li> 
+		<li><a href="A5">Great view of Central Park Onassis Resevoir<br>//Mayor John Purroy Mitchel Memorial, 2 E 90th St, New York, NY 10128</a></li> 
+
+	</ul>
+    <div id="message" style="display:none;"></div>
+</body>
+
+</html>

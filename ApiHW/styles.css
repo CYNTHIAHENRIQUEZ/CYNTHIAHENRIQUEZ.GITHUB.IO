@@ -1,0 +1,89 @@
+body {
+	font-family: Gotham Medium, sans-serif;
+	font-size: 0.8em;
+	background-color: #f9ff8a;
+}
+
+#notes{
+border: 1px solid #333;
+  -webkit-column-span: all;
+  column-span: all;
+  text-align: center;
+
+
+
+}
+#map {
+	position: fixed;
+	left:30%;
+	float: center;
+	width: 500px;
+	height: 400px;
+	padding:max-width,max-height,30px,30px;	
+
+}
+
+ul {
+	float: left;
+	list-style-type: none;
+	margin: 0;
+	padding: 0px;
+
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 50px 100px;
+  grid-gap: 5px;
+  background-color: #cea8ff;
+  padding: 10px;
+
+
+}
+ul li a	{
+	display: block;
+	width: 299px;
+	padding: 5px;
+	margin: 0 5px 5px; 
+	background-color:#f6bfff;
+
+}
+#message {
+	position: absolute;
+	padding: 10px;
+	background: white;
+	border: 2px black solid;
+	border-radius: 10px;
+}
+
+
+
+#nav ul{
+display: -webkit-flex;
+  -webkit-justify-content: center;
+  justify-content: center; /* center horizontally */
+  -webkit-align-items: center; /* center vertically */
+  align-items: center;
+  width: center;
+  
+  background: #ccc;
+}
+#nav ul li {
+	display: inherit;
+	text-align: center;
+	margin-right: -6px;
+	position: left;
+	padding: 30px 200px;
+	background: #fff;
+	cursor:pointer;
+}
+
+#nav ul li:hover {
+	background: #111;
+	color: grey;
+}
+
+
+
+
+
+
+
