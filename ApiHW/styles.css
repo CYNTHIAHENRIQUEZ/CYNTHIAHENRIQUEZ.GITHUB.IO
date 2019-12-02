@@ -8,12 +8,12 @@ font-family: Comfortaa,sans-serif;
 
 
 #map {
-          justify-content: center;
+       
         height: 100%;
         width: 60%;
       }
 
-#description{
+#description {
 border: solid black;
 padding:5px;
 margin:10px;
