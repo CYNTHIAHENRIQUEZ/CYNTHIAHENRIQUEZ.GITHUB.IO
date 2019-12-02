@@ -4,29 +4,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Custom Markers</title>
+    <title>Cynthia's Favorite Spots</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
       #map {
           justify-content: center;
         height: 100%;
         width: 60%;
-    
-      
       }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 50%;
-        margin: 0;
-        padding: 0;
-      }
+
     </style>
   </head>
   <body>
     <div id="map"></div>
+
+
+    <div id="description"> 
+These are some of my recent favorite locations in NYC. 
+
+    </div>
     <script>
       var map;
       function initMap() {
@@ -96,36 +93,6 @@
             type: 'parking'
 
             //Bay Ridge Promenande 
-          }, {
-            position: new google.maps.LatLng(-33.91666, 151.23468),
-            type: 'info'
-          }, {
-            position: new google.maps.LatLng(-33.916988, 151.233640),
-            type: 'info'
-          }, {
-            position: new google.maps.LatLng(-33.91662347903106, 151.22879464019775),
-            type: 'parking'
-          }, {
-            position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
-            type: 'parking'
-          }, {
-            position: new google.maps.LatLng(-33.91665018901448, 151.2282474695587),
-            type: 'parking'
-          }, {
-            position: new google.maps.LatLng(-33.919543720969806, 151.23112279762267),
-            type: 'parking'
-          }, {
-            position: new google.maps.LatLng(-33.91608037421864, 151.23288232673644),
-            type: 'parking'
-          }, {
-            position: new google.maps.LatLng(-33.91851096391805, 151.2344058214569),
-            type: 'parking'
-          }, {
-            position: new google.maps.LatLng(-33.91818154739766, 151.2346203981781),
-            type: 'parking'
-          }, {
-            position: new google.maps.LatLng(-33.91727341958453, 151.23348314155578),
-            type: 'library'
           }
         ];
 
