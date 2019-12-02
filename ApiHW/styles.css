@@ -5,7 +5,13 @@ font-family: Comfortaa,sans-serif;
 
 }
 
+html,body{
+text-align: center;
+height: 100%;
 
+
+
+}
 
 #map {
        
