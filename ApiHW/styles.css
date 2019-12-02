@@ -9,14 +9,11 @@ html,body{
 text-align: center;
 height: 100%;
 
-
-
 }
 
 #map {
        
         height: 100%;
-        width: 60%;
       }
 
 #description {
