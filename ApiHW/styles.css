@@ -14,7 +14,8 @@ font-kerning: 5px;
 }
 
 p{
-	text-align: center;
+	 margin-left: auto;
+        margin-right:auto;
 	width: 50%;
 	padding: 5%;
 	font-kerning: 5px
