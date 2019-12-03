@@ -14,9 +14,11 @@ font-kerning: 5px;
 }
 
 p{
-
+	 margin-left: auto;
+        margin-right:auto;
 	width: 50%;
 	padding: 5%;
-	font-kerning: 5px
+	font-kerning: 5px;
+	border-bottom:solid white 1px;
 
 }
