@@ -19,7 +19,7 @@
   width:90%;
      margin-left: auto;
         margin-right:auto;
- z-index: 0;
+     z-index: 0;
 }
 
 
@@ -121,7 +121,7 @@
           }, {
             position: new google.maps.LatLng(40.720646, 73.993471),
             type: 'star'
-           // title: 'Museum Of Street Art'
+            title: 'Museum Of Street Art'
 
             //museum of street art
           }, {
@@ -147,6 +147,15 @@
           });
         };
       }
+
+
+
+
+
+
+      google.maps.event.addListener(marker, 'click', function() {
+          $('#text').load('features.title');
+        });
 
     </script>
     <script async defer
