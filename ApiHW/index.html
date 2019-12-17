@@ -40,12 +40,19 @@
         background-color: black;
         color: white;
       }
+
+      script.var{
+        color:black;
+      }
+
+
     </style>
 
   </head>
   <body>
 <h1>  Chill Spots</h1>
-<p>These are some fun and popular destinations around nyc that my family and I have enjoyed. Hope you will too.</p>
+<p>These are some fun and popular destinations around nyc that my family and I have enjoyed. <br> Hope you will too.
+These locations have image markers to them. Places with the "star" are not so popular locations that are weird and walkable. Locations with a car have parking lots with a scenic view. Locations with a dog face are dog friendly and locations with the eatinig utensils have resturants.</p>
 
 
 <div id="text"></div>
@@ -59,10 +66,225 @@
       function initMap() {
         map = new google.maps.Map(
             document.getElementById('map'),
-            {center: new google.maps.LatLng(40.7356361,-73.9429516), zoom: 9});
+            {center: new google.maps.LatLng(40.7356361,-73.9429516), zoom: 12,styles: [
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#bdbdbd"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.neighborhood",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#fffbca"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.man_made",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#ffe9f8"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#eeeeee"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e5e5e5"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#ebb0d6"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dadada"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#ffd9ff"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#a26481"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e5e5e5"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#eeeeee"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#c9c9c9"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#99f9f6"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  }
+]});
 
         var iconBase =
             'https://cynthiahenriquez.github.io/ApiHW/markers/';
+
+
 
         var icons = {
           parking: {
@@ -81,71 +303,94 @@
           }
         };
 
+
+
         var features = [
           {
             position: new google.maps.LatLng(40.767443, -73.884386),
-            type: 'parking'
-          //  title: 'Watch Airplanes'
+            type: 'parking',
+            title: 'Watch Airplanes'
          //Airplane viewing
 
           }, {
             position: new google.maps.LatLng(40.772911, -73.940123),
-            type: 'star'
-          //  title: 'Mini lighthouse'
+            type: 'star',
+            title: 'Mini lighthouse'
 
             //lighthouse
           }, {
             position: new google.maps.LatLng(40.784234, -73.958819),
-            type: 'dog'
-          //  title: 'Mayor John Purroy Memorial'
+            type: 'dog',
+            title: 'Mayor John Purroy Memorial'
 
             //Mayor John Purroy Memorial
           }, {
             position: new google.maps.LatLng(40.847144, -73.924425),
-            type: 'star'
-          //  title: 'Birthplace of Hip Hop'
+            type: 'star',
+            title: 'Birthplace of Hip Hop'
 
             //Birthplace of Hip Hop
           }, {
             position: new google.maps.LatLng(40.742548, -73.960687),
-            type: 'dog'
-           // title: 'Hunters Point South Park'
+            type: 'dog',
+            title: 'Hunters Point South Park'
 
             //hunters point south park
           }, {
             position: new google.maps.LatLng(40.785298, -73.935410),
-            type: 'star'
-          //  title: 'Wards Island Bridge'
+            type: 'star',
+            title: 'Wards Island Bridge'
 
             //Wards Island Bridge
           }, {
             position: new google.maps.LatLng(40.720646, 73.993471),
-            type: 'star'
-            //title: "Museum Of Street Art"
+            type: 'star',
+            title: "Museum Of Street Art"
 
             //museum of street art
           }, {
             position: new google.maps.LatLng(40.705622, -74.002331),
-            type: 'food'
-            //title: 'South St Sea Port'
+            type: 'food',
+            title: 'South St Sea Port'
             //south street sea port
           }, {
             position: new google.maps.LatLng(40.611988, -74.037332),
-            type: 'parking'
-           // title: 'Great View of the Verrazzano'
+            type: 'parking',
+            title: 'Great View of the Verrazzano'
 
             //Bay Ridge Promenande 
           }
         ];
 
-        // Create markers.
-        for (var i = 0; i < features.length; i++) {
+
+
+        // Creating markers.
+        for (var i = 0; i < features.length; i++) 
+        {
           var marker = new google.maps.Marker({
             position: features[i].position,
             icon: icons[features[i].type].icon,
             map: map
           });
         };
+
+
+
+
+ var infowindow = new google.maps.InfoWindow({
+          content:  features[i].title,
+          maxWidth: 200
+        });
+  
+
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+
+
+
+
       }
 
 
